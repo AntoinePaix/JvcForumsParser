@@ -7,7 +7,6 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-import time
 
 def generateUrls(forum_url, pages_forum='all'):
     """Génère les urls des pages d'un forum"""
@@ -19,7 +18,6 @@ def generateUrls(forum_url, pages_forum='all'):
         while True:
             link = '-'.join(url[:5] + [str(int(i))] + url[6:])
             i += 25
-            time.sleep(0.5)
             yield link
 
     # on renvoie simplement l'url passée en argument
