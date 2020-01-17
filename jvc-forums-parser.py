@@ -129,7 +129,7 @@ def parserPost(post):
 
 if __name__ == '__main__':
 
-    for page_url in generateUrls('http://www.jeuxvideo.com/forums/0-51-0-1-0-1-0-blabla-18-25-ans.htm', pages_forum=[1, 2, 3]):
+    for page_url in generateUrls('http://www.jeuxvideo.com/forums/0-38-0-1-0-1-0-linux.htm', pages_forum=[1, 2, 3, 4, 5]):
         for id_topic, topic_url, topic_title, *_ in getTopics(page_url):
             for page in getTopicPages(topic_url):
                 for post in getPosts(page):
