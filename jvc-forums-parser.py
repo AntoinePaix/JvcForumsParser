@@ -26,7 +26,7 @@ def generateUrls(forum_url, pages_forum='all'):
         yield link
 
     # on renvoie une sélection d'urls
-    elif isinstance(pages_forum, list) or isinstance(pages_forum, tuple) or isinstance(pages_forum, set):
+    elif hasattr(pages_forum, '__iter__') or hasattr(pages_forum, '__getitem__'):
         url = forum_url.split('-')
 
         def convert_page_number(page):
